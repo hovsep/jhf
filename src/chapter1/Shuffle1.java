@@ -1,3 +1,5 @@
+package chapter1;
+
 public class Shuffle1 {
 
     public static void main(String [] args) {
