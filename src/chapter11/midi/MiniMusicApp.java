@@ -12,15 +12,16 @@ public class MiniMusicApp {
             Sequence seq = new Sequence(Sequence.PPQ, 4);
             Track track1 = seq.createTrack();
 
+
             int i = 0;
             for (i=0; i < 127; i++) {
                 ShortMessage a = (new ShortMessage());
-                a.setMessage(144, 7, i, 127);
+                a.setMessage(144, 1, i, 127);
                 MidiEvent noteOn = new MidiEvent(a, i);
                 track1.add(noteOn);
                 ShortMessage b = (new ShortMessage());
-                b.setMessage(144, 7, i, 127);
-                MidiEvent noteOff = new MidiEvent(b, i);
+                b.setMessage(128, 1, i, 127);
+                MidiEvent noteOff = new MidiEvent(b, i+10);
                 track1.add(noteOff);
             }
 
