@@ -11,7 +11,7 @@ public class Human implements Serializable {
     /**
      * Transient property should not be serialized
      */
-    private transient String nickname = "";
+    private transient String nickname;
 
     public Human(int age, String name, String nickname) {
         this.age = age;
@@ -21,6 +21,6 @@ public class Human implements Serializable {
 
     @Override
     public String toString() {
-        return "Human: age:" + this.age + ", name:" + this.name;
+        return "Human: age=" + this.age + ", name=" + this.name + ", nickname=" + this.nickname;
     }
 }
