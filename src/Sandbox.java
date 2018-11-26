@@ -1,7 +1,8 @@
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class Sandbox {
+public class Sandbox implements Serializable {
 
     public static void main(String[] args) throws Exception {
         if (args.length < 2) {

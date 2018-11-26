@@ -2,6 +2,7 @@ package chapter14.io;
 
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
 public class App {
 
@@ -31,9 +32,9 @@ public class App {
     }
 
 
-    class Hova {
+    class Hova implements Serializable {
 
-        private int age = 27;
+        transient private int age = 27;
 
         private String name = "Hovsep";
 
@@ -48,7 +49,7 @@ public class App {
         }
     }
 
-    class Vita {
+    class Vita implements Serializable {
 
         private int age = 23;
 
