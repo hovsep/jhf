@@ -1,4 +1,4 @@
-package chaprter9;
+package chapter9;
 
 public class B extends A {
     public B() {
